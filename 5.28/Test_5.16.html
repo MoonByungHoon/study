@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자동차 시속 테스트</title>
+    <script defer type="text/javascript" src="testDB.js?ver=1"></script>
+    <link rel="stylesheet" type="text/css" href="test_style.css">
+</head>
+
+<body>
+    <header><h1>원하는 동작을 선택해주세요.</h1></header>
+    <main>
+        <form method="post" action="" id="car_info">
+            모델 <input type="text" name="car_model" id="car_model_id" placeholder="모델명을 입력해주세요."><br>
+            시속 <input type="text" name="car_speed" id="car_speed_id" placeholder="시속을 입력해주세요."><br>
+            색상 <input type="text" name="car_color" id="car_color_id" placeholder="색상을 입력해주세요."><br>
+            <input type="button" onclick="setinfo()" value="저장">
+            <input type="button" onclick="getinfo()" value="찾기">
+            <input type="button" onclick="getinfo_all()" value="전체 리스트 출력">
+        </form>
+    </main>
+    <article>
+        <ul>
+            <li style="margin-bottom: 10px">
+                <p id="display1"></p>
+            </li>
+            <li>
+                <p id="display2"></p>
+            </li>
+        </ul>
+    </article>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+form {
+    text-align: center;
+    background-color: darkorange;
+}
+
+header h1 {
+    text-align: center;
+    background-color: aqua;
+    height: 100px;
+    line-height: 100px;
+    color: deeppink;
+}
+
+input {
+    margin: 5px;
+    color: blue;
+}
+
+article {
+    background-color: hotpink;
+    height: 617px;
+}
+
+li {
+    text-align: center;
+    color: gold;
+}
