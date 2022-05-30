@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer type="text/javascript" src="icecream_info.js"></script>
+    <link rel="stylesheet" type="text/css" href="icecream_style.css">
+    <title>아이스크림 재고 관리 프로그램</title>
+
+</head>
+<body>
+    <header><h1>아이스크림 재고 관리</h1></header>
+    <main>
+        <article>
+            <section>
+                <form method="post" action="" id="icecream_info">
+                    <div>
+                        <ul>
+                            <li>
+                                <input type="radio" name="brand" value="빙그레">빙그레 &emsp;
+                                <input type="radio" name="brand" value="롯데제과">롯데제과 &emsp;
+                                <input type="radio" name="brand" value="해태">해태
+                            </li>
+                            <li>
+                                &emsp;&emsp;&emsp; 제품 <input type="text" placeholder="상품명을 입력하세요." id="model" >
+                            </li>
+                            <li>
+                                &emsp;&emsp;&emsp; 수량 <input type="text" placeholder="입고 수량을 입력하세요." id="amount" >
+                            </li>
+                            <li>
+                                근무자 이름 <input type="text" placeholder="근무자명을 입력하세요." id="user">
+                            </li>
+                            <li>
+                                입고 날짜 <input type="date" id="day">&emsp;&emsp;&emsp;
+                            </li>
+                            <li>
+                                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="button" onclick="sum_icecream()" value="입고">
+                                <input type="button" onclick="sub_icecream()" value="출고">
+                            </li>
+                            <br>
+                            <li>
+                                &emsp;&emsp;&emsp; 제품 <input type="text" placeholder="상품명을 입력하세요." id="model_put" ></li>
+                            <li>
+                                &emsp;&emsp;&emsp;&emsp;<input type="button" onclick="put_icecream_all()" value="입출고 이력 확인">
+                                <input type="button" onclick="put_icecream()" value="재고확인">
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </section>
+            <section>
+                <table id="put_line"></table>
+            </section>
+        </article>
+    </main>
+</body>
+
+</html>
