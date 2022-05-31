@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script defer type="text/javascript" src="./testjs.js"></script>
+<link rel="stylesheet" type="text/css" href="./testcss.css">
+<title>html 테스트중</title>
+</head>
+<body>
+	<h2>회원가입</h2>
+	<hr>
+	<div id="regform">
+		<form name="form1">
+			<label>이름</label><br> 
+			<input type="text" name="name" size="40"><br>
+			<hr>
+			<label>이메일</label><br> 
+			<input type="email" name="email" size="40"><br>
+			<button type="button" onclick="signUp()">가입</button>
+		</form>
+	</div>
+	<div id="result" class="result">
+		<h3>가입 정보</h3>
+		<hr>
+		이름 : <span id="rname"></span><br>
+		이메일 : <span id="rmail"></span><br>
+	</div>
+</body>
+</html>
