@@ -1,0 +1,194 @@
+* {
+  /*모든 태그의 마진과 패딩을 없에서 화면에서의 여백을 안남김*/
+  margin: 0px;
+  padding: 0px;
+}
+
+#hd_div_l {
+  height: 60px;
+  float: left;
+  width: 50%;
+  text-align: right;
+  background-color: #5C17B2;
+  cursor:pointer;
+}
+
+#hd_div_r {
+  height: 60px;
+  float: right;
+  width: 50%;
+  background-color: #BEE6FF;
+  text-align: left;
+  cursor:pointer;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+}
+
+main {
+  display: inline;
+}
+
+#main_div {
+  position: relative;
+  height: 220px;
+  width: 100%;
+}
+
+#main_text {
+  position: absolute;
+  /*자식 객체로 만들어서 이미지 안으로 글씨를 집어 넣음.*/
+  left: 61.5%;
+  transform: translateX(-38%);
+  font-size: 12px;
+  top: 20px;
+}
+#main_text a{
+  text-decoration: none;
+}
+
+#main_img img {
+  position: absolute;
+  /*자식 객체로 만들어서 이미지 안으로 글씨를 집어 넣음.*/
+  left: 50%;
+  transform: translateX(-50%);
+  /*가운데 정렬하기 위한 코드*/
+}
+
+#main_logo_image {
+  position: absolute;
+  left: 33%;
+  transform: translateX(-67%);
+  top: 85px;
+  /* 세로의 정렬을 할때는 %가 아닌 px로 주는게 안정적이다. */
+  cursor:pointer;
+}
+
+#main_search {
+  position: absolute;
+  background-color: #285A35;
+  padding: 6px 15px;
+  left: 62%;
+  transform: translateX(-38%);
+  top: 100px;
+}
+
+#main_recommend {
+  position: absolute;
+  left: 68%;
+  transform: translateX(-32%);
+  top: 50px;
+  cursor:pointer;
+}
+
+#nav_text {
+  position: absolute;
+  top: 166px;
+  left: 18%;
+  cursor:pointer;
+}
+
+#nav_text > ul {
+  list-style: none;
+}
+
+#nav_text li {
+  width: 120px;
+  border-top: 1px solid #D2D2D2;
+  border-left: 1px solid #D2D2D2;
+  float: left;
+}
+
+#last_li {
+  border-right: 1px solid #D2D2D2;
+}
+
+#main_art hr {
+  border-color: #285A35;
+}
+
+#main_art {
+  position: absolute;
+  background-color: #E6F4FF;
+  width: 100%;
+  height: 400px;
+  top: 278px;
+}
+
+#main_art ul {
+  position: absolute;
+  list-style: none;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor:pointer;
+}
+
+#main_art li {
+  float: left;
+}
+
+#main_art #art_li_center {
+  border-right: 1px solid #D2D2D2;
+  border-left: 1px solid #D2D2D2;
+}
+#nav_text img{
+  position: absolute;
+}
+#nav_text strong{
+  font-size: 18px;
+  position: absolute;
+  color: #285A35;
+  margin: 13px 20px;
+}
+#main_form #input_span{
+  position: absolute;
+  height: 36px;
+  width: 380px;
+  border: 2px solid #285A35;;
+  top: 98px;
+  left: 54%;
+  transform: translateX(-50%);
+}
+#input_span input{
+  position: absolute;
+  left: 4%;
+  top: 8px;
+  width: 300px;
+  height: 20px;
+  border: 0px solid white;
+  outline: none;
+}
+#main_form select{
+  position: absolute;
+  border: 2px solid #285A35;
+  margin: 0px 17px;
+  padding: 0px 15px;
+  width: 120px;
+  height: 40px;
+  top: 98px;
+  left: 37%;
+  font-size: 15px;
+  color: #285A35;
+  cursor:pointer;
+}
+
+#search_button{
+  position: absolute;
+  background-color: #285A35;
+  width: 56px;
+  height: 38px;
+  left: 61%;
+  top: 98px;
+}
+#search_button input{
+  padding: 9px 18px;
+}
+
+#nav_text li:hover{
+  display: none;
+  background-color: #285A35;
+  padding-top: 20px;
+  transition-duration: 10s;
+}
