@@ -1,0 +1,14 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+header{
+  background-color: aqua;
+}
+main{
+  background-color: aquamarine;
+}
+input{
+  margin: 2px;
+}

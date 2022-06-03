@@ -1,0 +1,33 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+header {
+	text-align: center;
+	background-color: aqua;
+}
+
+main {
+	background-color: aquamarine;
+	padding-top: 10px;
+	padding-left: 45%;
+	padding-bottom: 10px;
+}
+
+table {
+	border: 1px solid black;
+}
+
+td {
+	width: 150px;
+	font-size: 20px;
+}
+
+.border_line {
+	border-left: 1px solid black;
+}
+
+#border_top {
+	border-top: 1px solid black;
+}
