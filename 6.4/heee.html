@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <html>
+    <body>
+        위치<br>
+        <img src="아메리카노.jpg" id="wici">
+        <br><br>
+        다른위치<br>
+        <img src="카페라떼.jpg" id="darunwici">    
+    </body>    
+    <script>
+        var wici = document.getElementById('wici');
+        var darunwici = document.getElementById('darunwici');
+        wici.onmouseover = function(){
+            darunwici.src = "카푸치노.jpg";
+        }
+        wici.onmouseout = function(){
+            darunwici.src = "아메리카노.jpg";
+        }
+    </script>    
+</html>
+</body>
+</html>

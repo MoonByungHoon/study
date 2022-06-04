@@ -1,0 +1,23 @@
+.layout{
+    width: 100%;
+}
+
+.header{
+    height: 35px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding-top: 5px;
+    cursor: pointer;
+}
+
+.middle_menu{
+    background-color: rgb(242, 145, 255);
+    text-align: center;
+    color: bisque;
+}
+
+.bottom_menu{
+    background-color:rgb(247, 149, 193);
+    text-align: center;
+}
