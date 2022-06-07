@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer type="text/javascript" src="study_6.7.js"></script>
+  <link rel="stylesheet" type="text/css" href="study_6.7.css">
+  <title>편의점 물품 정리</title>
+</head>
+
+<body>
+  <header>
+    <h1>편의점 물품 정리</h1>
+  </header>
+  <hr>
+  <main>
+    <div class="button_input_1">
+      <input type="button" onclick="change_main(1)" value="입고">
+      <input type="button" onclick="change_main(2)" value="출고">
+      <input type="button" onclick="change_main(3)" value="재고">
+    </div>
+    <form id="main_form">
+      <div class="input_list" id="input_list">
+        상품명 <input type="text" id="model" placeholder="상품을 입력하세요."><br>
+        가격 &emsp;<input type="text" id="price"  placeholder="가격을 입력하세요."><br>
+        수량 &emsp;<input type="text" id="amount"  placeholder="수량을 입력하세요."><br>
+        제조사 <input type="text" id="brand"  placeholder="브랜드를 입력하세요." ><br>
+        유통기한&emsp;&emsp;&emsp;&emsp;<input type="date" id="date"><br>
+      </div>
+      <hr>
+      <div class="button_input_2" id="button_input_2">
+        <input type="button" onclick="suminfo()" value="저장">
+      </div>
+    </form>
+  </main>
+  <hr>
+  <section>
+    <table id="put_list">
+    </table>
+  </section>
+  <hr>
+  <footer>
+    <p>MBH 입출고 관리 시스템</p>
+    <p>문의전화 112</p>
+  </footer>
+</body>
+
+</html>

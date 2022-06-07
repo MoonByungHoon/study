@@ -1,0 +1,100 @@
+* {
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+table {
+  margin: 0px auto;
+}
+
+td {
+  padding: 4px 10px 4px 10px;
+  border: 1px solid black;
+}
+
+hr {
+  border: 1px solid black
+}
+
+header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: turquoise;
+  color: brown;
+}
+
+main {
+  background-color: aquamarine;
+}
+
+main .button_input_1 {
+  margin: 0 auto;
+  width: 300px;
+  text-align: right;
+}
+
+main .button_input_1 input {
+  margin: 10px 13px;
+  width: 50px;
+  height: 30px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.main_form {
+  text-align: center;
+  display: flex;
+}
+
+form .input_list {
+  margin: 0 auto;
+  font-size: 18px;
+  width: 300px;
+}
+
+form .input_list input {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 18px;
+  text-align: left;
+}
+
+form .input_list #date {
+  text-align: center;
+}
+
+form .button_input_2 {
+  margin: 0 auto;
+  width: 300px;
+  text-align: right;
+}
+
+form .button_input_2 input {
+  font-size: 15px;
+  margin: 10px;
+  height: 30px;
+  width: 40px;
+  cursor: pointer;
+}
+
+section {
+  background-color: bisque;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+section strong {
+  font-size: 27px;
+}
+
+#put_list {
+  text-align: center;
+}
+
+footer{
+  background-color: black;
+  color: white;
+  padding: 15px;
+}
