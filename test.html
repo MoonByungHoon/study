@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      font-size: 0px;
+      border: 1px solid burlywood;
+    }
+
+    .div1 {
+      background-color: indigo;
+      width: 200px;
+      height: 200px;
+      color: white;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    .div2 {
+      background-color: black;
+      width: 200px;
+      height: 200px;
+      color: white;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    div p {
+      background-color: wheat;
+      font-size: 20px;
+    }
+
+    div span {
+      background-color: violet;
+      font-size: 20px;
+    }
+
+    .div_outline_p {
+      background-color: blueviolet;
+      font-size: 20px;
+      color: white;
+      height: 100px;
+    }
+
+    .div_outline_p2 {
+      background-color: crimson;
+      font-size: 20px;
+      color: white;
+      height: 100px;
+      display: inline-block;
+      /* vertical-align: top; */
+    }
+
+    .all {
+      display: inline-flex;
+      /* vertical-align: top; */
+    }
+
+    body{
+      text-align: center;
+    }
+  </style>
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="all">
+    <div class="div1">
+      1번 div
+      <p>1번 p</P>
+      <p>2번 p</p>
+      <span>1번 span</span>
+      <span>2번 span</span><br><br>
+      가로 세로 200px<br>
+      부여함.
+    </div>
+    <div class="div2">
+      2번 div
+      <p>2번 p</P>
+      <p>2번 p</p>
+      <span>1번 span</span>
+      <span>2번 span</span><br><br>
+      가로 세로 200px<br>
+      부여함.
+    </div>
+    <p class="div_outline_p">
+      div밖의 p<br>
+      높이 100px<br>
+      부여함.
+    </p>
+  </div>
+  <p class="div_outline_p2">
+    flex밖의 p<br>
+    높이 100px<br>
+    부여함.
+  </p>
+</body>
+
+</html>
