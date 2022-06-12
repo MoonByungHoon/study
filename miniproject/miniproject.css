@@ -1,0 +1,169 @@
+* {
+  text-align: center;
+  font-size: 0px;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  /* font, margin, padding 등을 0으로 주고 레이아웃 구성을 편하게 하기 위해서
+  border를 1px 주게 되는데 이때에 border 조차도 박스으로 취급 시켜서 코딩을 편하게함 */
+}
+
+img , a{
+  cursor: pointer;
+  /* 마우스커서를 손가락으로 변환 */
+}
+
+body {
+  height: 3000px;
+
+}
+
+.top_image_l{
+  background-color: #5C17B2;
+  text-align: right;
+  /* 박스 내부를 우측 정렬 */
+  float: left;
+  /* 박스 자체를 좌측끝으로 밀어냄 여기서 
+  .top_images_r이 같이 서로 밀어서 가운데 정렬 효과를 냄 */
+  width: 50%;
+  height: 60px;
+}
+
+.top_image_r{
+  background-color: #BEE6FF;
+  text-align: left;
+  /* 박스 내부를 좌측 정렬 */
+  float: right;
+  /* 박스 자체를 우측 끝으로 밀어냄 */
+  width: 50%;
+  height: 60px;
+}
+
+.header_main_div {
+  width: 960px;
+  height: 147px;
+  /* 전체적으로 박스 크기를 잡아줘서 레이아웃 구성을 편하게함 */
+  margin-top: 8px;
+  display: inline-block;
+  /* body 박스 내에서 inline 속성을 부여해서 센터에 위치하게 함.
+  또한 block 속성을 부여해서 크기 설정이 가능하게함. */
+}
+
+.header_area1 {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  /* flex를 부여해서 내부 tag들을 우측으로 몰아줌*/
+}
+
+.header_menu{
+  width: 400px;
+  height: 19px;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+}
+
+
+.header_area1 ul {
+  width: 100%;
+  height: 11px;
+}
+
+.header_area1 .last_a{
+  border: 0px;
+}
+
+.header_area1 li {
+  display: inline-block;
+}
+
+.header_area1 a {
+  border-right: 1px solid rgb(218, 218, 218);
+  color: #285A35;
+  text-decoration: none;
+  /* decoration을 none줘서 a tag의 밑줄 강조효과를 없엠 */
+  margin-right: 4px;
+  padding-right: 4px;
+  font-size: 12px;
+  height: 11px;
+  display: flex;
+  align-items: center;
+  /* a tag가 기본 display가 inline이라 박스 크기가 설정안되서 변환
+  block으로 줘도 되나 박스 밖으로 벗어나는 font를 바로 잡기 위해서
+  block가 아닌 flex를 줌. flex의 기본 속성이 block과 같음을 이용.
+  그리고 font를 center로 잡아줘서 박스 안으로 위치하게함. */
+}
+
+.header_area2 {
+  display: flex;
+  align-items: center;
+  /* display를 flex를 주어서 내부 item들의 위치가 한 라인에 서게하고
+  위치를 고정 및 align-items를 center로 주어서 이쁘게 중간 높이에 모아줌.*/
+  width: 100%;
+  padding: 30px 0px;
+  height: 128px;
+}
+
+.header_yp_logo{
+  width: 248px;
+  height: 56px;
+  align-self: flex-end;
+}
+
+form{
+  align-self: flex-end;
+  /* form tag를 아래로 정렬해서 yp logo와 같은 라인에 위치시킴 */
+  height: 42px;
+  /* height를 굳이 따로 설정해줘서 form안의 tag들을 확실하게 잡고 정렬 */
+  border: 2px solid #285A35;
+  margin: 0px 1px 2px 20px;
+  text-align-last: left;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.header_select {
+  border: 0px;
+  padding-left: 20px;
+  font-size: 15px;
+  width: 120px;
+  height: 38px;
+  text-align-last: left;
+  text-align: left;
+  color: #285A35;
+  outline: none;
+}
+
+.header_select * {
+  font-size: 15px;
+  color: #285A35;
+  text-align-last: left;
+  text-align: left;
+}
+
+.search_text{
+  border: 0px;
+  width: 300px;
+  height: 38px;
+  outline: none;
+}
+
+.search_height_bar{
+  display: inline-block;
+  background-color: #285A35;
+  width: 1px;
+  height: 20px;
+}
+
+.glass_a{
+  background-color: #285A35;
+  width: 60px;
+  height: 42px;
+}
+
+.search_r_image{
+  align-self: center;
+  margin-left: 15px;
+}
