@@ -114,21 +114,21 @@ body {
 form{
   align-self: flex-end;
   /* form tag를 아래로 정렬해서 yp logo와 같은 라인에 위치시킴 */
+  width: 484px;
   height: 42px;
   /* height를 굳이 따로 설정해줘서 form안의 tag들을 확실하게 잡고 정렬 */
   border: 2px solid #285A35;
   margin: 0px 1px 2px 20px;
-  text-align-last: left;
-  text-align: left;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
 .header_select {
   border: 0px;
-  padding-left: 20px;
+  padding: 2px 0px 0px 16px;
   font-size: 15px;
-  width: 120px;
+  width: 128px;
   height: 38px;
   text-align-last: left;
   text-align: left;
@@ -152,15 +152,32 @@ form{
 
 .search_height_bar{
   display: inline-block;
+  border-left: 1px solid #285A35;
   background-color: #285A35;
   width: 1px;
   height: 20px;
+  margin: 0px 0px 0px 8px;
+}
+
+.down_bar{
+  display: inline-block;
+  margin: 4px 8px 0px 0px;
 }
 
 .glass_a{
   background-color: #285A35;
   width: 60px;
   height: 42px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(10%);
+}
+
+.glass_a input{
+  width: 22px;
+  height: 22px;
+  margin: 0px 19px;
 }
 
 .search_r_image{
