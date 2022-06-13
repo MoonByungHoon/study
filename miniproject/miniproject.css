@@ -5,36 +5,31 @@
   padding: 0px;
   box-sizing: border-box;
   /* font, margin, padding 등을 0으로 주고 레이아웃 구성을 편하게 하기 위해서
-  border를 1px 주게 되는데 이때에 border 조차도 박스으로 취급 시켜서 코딩을 편하게함 */
+  border를 1px 주게 되는데 이때에 border 조차도 박스으로 취급 시켜서 코딩을 편하게함. */
 }
 
-img , a{
+img, a {
   cursor: pointer;
-  /* 마우스커서를 손가락으로 변환 */
+  /* 마우스커서를 손가락으로 변환. */
 }
 
-body {
-  height: 3000px;
-
-}
-
-.top_image_l{
+.top_image_l {
   background-color: #5C17B2;
   text-align: right;
-  /* 박스 내부를 우측 정렬 */
+  /* 박스 내부를 우측 정렬. */
   float: left;
   /* 박스 자체를 좌측끝으로 밀어냄 여기서 
-  .top_images_r이 같이 서로 밀어서 가운데 정렬 효과를 냄 */
+  .top_images_r이 같이 서로 밀어서 가운데 정렬 효과를 냄. */
   width: 50%;
   height: 60px;
 }
 
-.top_image_r{
+.top_image_r {
   background-color: #BEE6FF;
   text-align: left;
-  /* 박스 내부를 좌측 정렬 */
+  /* 박스 내부를 좌측 정렬. */
   float: right;
-  /* 박스 자체를 우측 끝으로 밀어냄 */
+  /* 박스 자체를 우측 끝으로 밀어냄. */
   width: 50%;
   height: 60px;
 }
@@ -42,7 +37,7 @@ body {
 .header_main_div {
   width: 960px;
   height: 147px;
-  /* 전체적으로 박스 크기를 잡아줘서 레이아웃 구성을 편하게함 */
+  /* 전체적으로 박스 크기를 잡아줘서 레이아웃 구성을 편하게함. */
   margin-top: 8px;
   display: inline-block;
   /* body 박스 내에서 inline 속성을 부여해서 센터에 위치하게 함.
@@ -53,36 +48,44 @@ body {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  /* flex를 부여해서 내부 tag들을 우측으로 몰아줌*/
+  /* flex를 부여해서 내부 tag들을 우측으로 몰아줌. */
 }
 
-.header_menu{
+.header_menu {
   width: 400px;
   height: 19px;
-  margin-top: 8px;
+  margin-top: 9.5px;
   display: flex;
   align-items: center;
+  /* 자식 태그들의 높낮이를 가운데 정렬. */
 }
 
+.header {
+  width: 100%;
+  height: 275px;
+  border-bottom: 2px solid #285A35;
+}
 
 .header_area1 ul {
   width: 100%;
   height: 11px;
 }
 
-.header_area1 .last_a{
+.header_area1 .last_a {
   border: 0px;
+  margin-right: 2.5px;
 }
 
 .header_area1 li {
   display: inline-block;
+  /* inline-block를 줌으로써 박스 크기 조절 및 배치. */
 }
 
 .header_area1 a {
   border-right: 1px solid rgb(218, 218, 218);
   color: #285A35;
   text-decoration: none;
-  /* decoration을 none줘서 a tag의 밑줄 강조효과를 없엠 */
+  /* decoration을 none줘서 a tag의 밑줄 강조효과를 없엠. */
   margin-right: 4px;
   padding-right: 4px;
   font-size: 12px;
@@ -96,44 +99,50 @@ body {
 }
 
 .header_area2 {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   /* display를 flex를 주어서 내부 item들의 위치가 한 라인에 서게하고
   위치를 고정 및 align-items를 center로 주어서 이쁘게 중간 높이에 모아줌.*/
   width: 100%;
-  padding: 30px 0px;
-  height: 128px;
+  padding: 30px 0px 30px 0px;
+  height: 126.5px;
 }
 
-.header_yp_logo{
+.header_yp_logo {
   width: 248px;
   height: 56px;
   align-self: flex-end;
+  /* align-self를 flex-and값을 줌으로써 부모 박스안에서 하단에 위치하게함. */
 }
 
-form{
+form {
   align-self: flex-end;
-  /* form tag를 아래로 정렬해서 yp logo와 같은 라인에 위치시킴 */
+  /* form tag를 아래로 정렬해서 yp logo와 같은 라인에 위치시킴. */
   width: 484px;
-  height: 42px;
-  /* height를 굳이 따로 설정해줘서 form안의 tag들을 확실하게 잡고 정렬 */
+  height: 41.5px;
+  /* height를 굳이 따로 설정해줘서 form안의 tag들을 확실하게 잡고 정렬. */
   border: 2px solid #285A35;
   margin: 0px 1px 2px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* form태그 박스 안에 속한 자식 태그들의 배치를 수정함.
+  너비는 space-between을 줘서 양단 끝으로 배치 및 가운데 정렬.
+  align-items를 center를 줘서 높이는 가운데 정렬함. */
 }
 
 .header_select {
   border: 0px;
-  padding: 2px 0px 0px 16px;
+  padding: 1px 0px 0px 16px;
   font-size: 15px;
   width: 128px;
   height: 38px;
   text-align-last: left;
   text-align: left;
+  /* 옵션 텍스트들을 정렬함 */
   color: #285A35;
   outline: none;
+  /* 클릭시에 박스 강조 효과를 없엠. */
 }
 
 .header_select * {
@@ -141,46 +150,245 @@ form{
   color: #285A35;
   text-align-last: left;
   text-align: left;
+  /* 옵션 텍스트들을 정렬. */
 }
 
-.search_text{
+.search_text {
   border: 0px;
   width: 300px;
   height: 38px;
   outline: none;
+  /* 클릭시에 박스 강조 효과 없엠. */
 }
 
-.search_height_bar{
-  display: inline-block;
+.search_column_bar {
   border-left: 1px solid #285A35;
   background-color: #285A35;
-  width: 1px;
+  width: 2px;
   height: 20px;
-  margin: 0px 0px 0px 8px;
+  margin: 0px 0px 0px 7px;
 }
 
-.down_bar{
+.down_bar {
   display: inline-block;
   margin: 4px 8px 0px 0px;
 }
 
-.glass_a{
+.glass_a {
   background-color: #285A35;
   width: 60px;
   height: 42px;
   display: inline-flex;
-  justify-content: center;
   align-items: center;
+  /* 돋보기 위치를 정렬함 */
   transform: translateX(10%);
+  /* 좌표값을 살짝 조정하여서 픽셀 맞춤. */
 }
 
-.glass_a input{
+.glass_a input {
   width: 22px;
   height: 22px;
   margin: 0px 19px;
 }
 
-.search_r_image{
-  align-self: center;
-  margin-left: 15px;
+.search_r_image {
+  margin-left: 17px;
+}
+
+.header_area3 {
+  width: 100%;
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /* area3 자식 tag들 전부 정렬. */
+}
+
+.header_area3 ul {
+  margin-left: 46px; 
+  height: 52px; 
+  display: flex;
+  /* display를 flex를 주어서 li가 브라우저 크기에 따른 레이아웃 위치 변경이 없게 함. */
+}
+
+.header_area3 li {
+  display: inline-flex;
+  position: relative;
+  /* a tag를 받기 위해서 relative를 부여. */
+  /* justify-content: flex-start; */
+}
+
+.area3_a {
+  border-left: 1px solid rgb(218, 218, 218);
+  border-top: 1px solid rgb(218, 218, 218);
+  font-size: 16.5px;
+  font-weight: 600;
+  color: #285A35;
+  text-decoration: none;
+  position: absolute;
+  /* 이미지 위에 a tag를 띄우기 위해서 position에 absolute를 준다. */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* a tag내에 자식 태그들 위치를 정렬. */
+  width: 100%;
+  height: 100%;
+}
+
+.header_area3 img {
+  height: 52px;
+}
+
+.header_area3 .last_img {
+  border: 0px;
+  width: 61px;
+}
+
+main ul {
+  background-color: #E5F7EB;
+}
+
+.main li{
+  display: inline-block;
+}
+
+.center_li {
+  border-left: 1px solid rgb(218, 218, 218);
+  border-right: 1px solid rgb(218, 218, 218);
+}
+
+.section {
+  margin: 27px 0px 0px 0px;
+  width: 960px;
+  height: 3000px;
+  display: inline-flex;
+  flex-direction: column;
+  /* 자식 tag들을 세로로 정렬. */
+}
+
+h2{
+  font-size: 16.5px;
+  margin: 40px 0px 14px 0px;
+  align-self: flex-start;
+  /* h2만 개별로 왼쪽 정렬하기 위해서 flex-start를 부여함. justify가 아닌 align인 이유는
+  부모 tag에서 세로 정렬인 column을 부여하였기 때문임. */
+}
+
+.section_main_div {
+  background-color: #FBF3E6;
+  width: 960px;
+  height: 250px;
+  border: 1px solid rgb(218, 218, 218);
+  display: flex;
+  /* 자식 tag들의 정렬을 위해서 flex 선언. */
+}
+
+.section_a {
+  text-decoration: none;
+  /* a tag 특징인 밑줄을 없에기 위함. */
+  display: flex;
+  /* 자식 tag들을 정렬하기 위한 목적. */
+  align-items: center;
+}
+
+.dd_div {
+  margin: 0px 0px 0px 18px;
+}
+
+.dd_div dd{
+  text-align: left;
+}
+
+.section_a img{
+  width: 134px;
+  height: 194px;
+  margin: 0px 0px 0px 25px;
+}
+
+.dd1 {
+  font-size: 12px;
+  margin: 10px 0px 6px 0px;
+  height: 18px;
+}
+
+.dd2 {
+  height: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: -4px 0px 0px 0px;
+}
+
+.dd3 {
+  height: 19px;
+  font-size: 12px;
+  margin: 12px 0px 5px 0px;
+}
+
+.dd3 * {
+  font-size: 14px;
+  color: red;
+}
+
+.dd4 {
+  height: 88px;
+  font-size: 13px;
+  margin: 16px 0px 0px 0px;
+  line-height: 23px;
+}
+
+.aside_l {
+  border: 1px solid black;
+  background-color: white;
+  left: 0%;
+  /* aside를 왼쪽 정렬 하기 위함. */
+  display: flex;
+  flex-direction: column;
+  /* aside 특징상 양 사이드 중에 링크를 띄우는 것이므로 화면을 가리지 않기 위해 세로 정렬. */
+  position: fixed;
+  /* 허공에 둥둥 띄운다는 느낌으로 생각하면됨. 항상 사용자의 브라우저 위치에 고정되서 따라다님. */
+  width: 160px;
+  height: 600px;
+  top: 160px;
+  /* 브라우저 내에서 top기준 고정적으로 160px만큼 멀어짐. */
+}
+
+.aside_l h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid black;
+  width: 158px;
+  height: 38px;
+}
+.aside_l_ul li {
+  display: inline-flex;
+  flex-direction: column;
+  /* aside의 내부 li tag들의 정렬을 위한 목적으로 선언. */
+  width: 150px;
+  height: 185px;
+}
+
+.aside_l em{
+  font-size: 11px;
+}
+
+.aside_l h1 img{
+  width: 90px;
+  height: 25px;
+}
+
+.aside_l_ul img{
+  width: 150px;
+  height: 150px;
+}
+
+.aside_r {
+  position: fixed;
+  border: 1px solid black;
+  width: 160px;
+  height: 600px;
+  right: 0%;
+  /* aside를 오른쪽 정렬하기 위함. */
+  top: 160px;
+  /* 브라우저 내에서 top기준 고정적으로 160px만큼 멀어짐. */
 }
