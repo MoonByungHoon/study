@@ -58,10 +58,10 @@ public class lotto_study2 {
 		System.out.println("-------------------------");
 		
 		for(int i = 0; i < userNumbers.length; i++) {
-			lotto_study2_sub.printArray(computerNumbers[i]);
+//			lotto_study2_sub.printArray(computerNumbers[i]);
 			
-			System.out.println("총 맞은 갯수 : " + lotto_study2_sub.countSame
-					(computerNumbers, computerNumbers[i]));
+//			System.out.println("총 맞은 갯수 : " + 
+//			lotto_study2_sub.countSame(computerNumbers, computerNumbers[i]));
 		}
 		
 		sc.close();
