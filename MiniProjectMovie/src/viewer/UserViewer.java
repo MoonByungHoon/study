@@ -2,6 +2,10 @@ package viewer;
 
 import java.util.Scanner;
 
+import controller.BoardController;
+import controller.CinemaController;
+import controller.MovieController;
+import controller.MovieInformationController;
 import controller.UserController;
 import model.UserDTO;
 import util.ScannerUtil;
@@ -10,6 +14,14 @@ public class UserViewer {
 	private UserController usercontroller;
 	private Scanner sc;
 	private UserDTO login;
+	private MovieViewer movieViewer;
+	private MovieInformationViewer movieInformationViewer;
+	private CinemaViewer cinemaViewer;
+	private BoardViewer boardViewer;
+	private BoardController boardController;
+	private MovieController movieController;
+	private MovieInformationController movieInformationController;
+	private CinemaController cinemaController;
 
 	public UserViewer(Scanner sc) {
 		usercontroller = new UserController();
@@ -42,7 +54,15 @@ public class UserViewer {
 		user.setUserId(ScannerUtil.nextLine(sc, "로그인하실 아이디를 입력해주세요."));
 		user.setUserPw(ScannerUtil.nextLine(sc, "패스워드를 입력해주세요."));
 		
-		
+		if(usercontroller.usercheck(user)){
+			boardController.login(user);
+			cinemaController.login(user);
+			movieController.login(user);
+			movieInformationController.login(user);
+			
+			System.out.println("로그인이 완료되었습니다.");
+			movieViewer.viewerMain();
+		}
 	}
 
 	private void userJoin() {
@@ -64,5 +84,12 @@ public class UserViewer {
 		}
 
 		usercontroller.insert(user);
+	}
+
+	public void setViewerAll(BoardViewer bv, MovieInformationViewer miv, MovieViewer mv, CinemaViewer cv) {
+		this.boardViewer = bv;
+		this.movieInformationViewer = miv;
+		this.movieViewer = mv;
+		this.cinemaViewer = cv;
 	}
 }
