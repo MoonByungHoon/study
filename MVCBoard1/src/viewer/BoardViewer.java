@@ -44,7 +44,7 @@ public class BoardViewer {
 
 	private void printList() {
 		ArrayList<BoardDTO> list = controller.selectAll();
-		
+
 		if (list.isEmpty()) {
 			System.out.println("아직 등록된 글이 존재하지 앉습니다.");
 		} else {
