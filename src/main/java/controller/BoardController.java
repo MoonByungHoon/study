@@ -20,8 +20,8 @@ public class BoardController {
 	}
 
 	// 1.글 입력
-	public void insert(BoardDTO b) {
-		String query = "INSERT INTO `board`(`writerId`,`title`,`content`, `writtenDate`, `updateDate`) VALUES(?, ?, ?, ?, ?)";
+	public int insert(BoardDTO b) {
+		String query = "INSERT INTO `board`(`writerId`,`title`,`content`, `writtenDate`, `updateDate`) VALUES(?, ?, ?, NOW(), NOW())";
 
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(query);
@@ -29,21 +29,38 @@ public class BoardController {
 			pstmt.setString(2, b.getTitle());
 			pstmt.setString(3, b.getContent());
 
-			Timestamp d1 = new Timestamp(b.getWrittenDate().getTimeInMillis());
-			
-			pstmt.setTimestamp(4, d1);
-			pstmt.setTimestamp(5, d1);
+//			Timestamp d1 = new Timestamp(b.getWrittenDate().getTimeInMillis());
+//			
+//			pstmt.setTimestamp(4, d1);
+//			pstmt.setTimestamp(5, d1);
 
 			pstmt.executeUpdate();
 
+			query = "SELECT LAST_INSERT_ID()";
+
+			pstmt = conn.prepareStatement(query);
+
+			ResultSet rs = pstmt.executeQuery();
+			int lastId = 0;
+
+//			System.out.println(rs.findColumn("LAST_INSERT_ID()"));
+
+			if (rs.next()) {
+				lastId = rs.getInt("LAST_INSERT_ID()");
+
+			}
+
+			return lastId;
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+
+		return 0;
 	}
 
 	// 2.글 수정
-	public void udpate(BoardDTO b) {
-		String query = "UPDATE `board` SET `title`=?, `content`=? WHERE `id`=?";
+	public void update(BoardDTO b) {
+		String query = "UPDATE `board` SET `title`=?, `content`=?, `updateDate` = NOW() WHERE `id`=?";
 
 		try {
 			PreparedStatement pstmt = conn.prepareStatement(query);
@@ -119,6 +136,12 @@ public class BoardController {
 				b.setWriterId(rs.getInt("writerId"));
 				b.setTitle(rs.getString("title"));
 				b.setContent(rs.getString("content"));
+				Calendar temp = Calendar.getInstance();
+				temp.setTime(rs.getTimestamp("writtenDate"));
+				b.setWrittenDate(temp);
+				Calendar temp2 = Calendar.getInstance();
+				temp2.setTime(rs.getTimestamp("updateDate"));
+				b.setUpdateDate(temp2);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

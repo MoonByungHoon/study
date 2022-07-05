@@ -23,38 +23,38 @@
   }
 
   if (request.getParameter("content") == "") {
-    response.setCharacterEncoding("UTF-8");
-    PrintWriter writer = response.getWriter();
-
-    writer.println("<script type='text/javascript'>");
-    writer.println("alert('제목을 입력해주세요.');");
-    writer.println("history.back();");
-    writer.println("</script>");
-    
-    writer.flush();
-  } else if (request.getParameter("title") == ""){
   	response.setCharacterEncoding("UTF-8");
   	PrintWriter writer = response.getWriter();
-    
-    writer.println("<script type='text/javascript'>");
-    writer.println("alert('내용을 작성해주세요.');");
-    writer.println("history.back();");
-    writer.println("</script>");
-    
-    writer.flush();
+
+  	writer.println("<script type='text/javascript'>");
+  	writer.println("alert('제목을 입력해주세요.');");
+  	writer.println("history.back();");
+  	writer.println("</script>");
+
+  	writer.flush();
+  } else if (request.getParameter("title") == "") {
+  	response.setCharacterEncoding("UTF-8");
+  	PrintWriter writer = response.getWriter();
+
+  	writer.println("<script type='text/javascript'>");
+  	writer.println("alert('내용을 작성해주세요.');");
+  	writer.println("history.back();");
+  	writer.println("</script>");
+
+  	writer.flush();
   } else {
-    DBConnector connector = new MySqlConnector();
+  	DBConnector connector = new MySqlConnector();
 
-    BoardController boardController = new BoardController(connector);
+  	BoardController boardController = new BoardController(connector);
 
-    boardDTO.setWriterId(userDTO.getId());
-    boardDTO.setContent(request.getParameter("content"));
-    boardDTO.setTitle(request.getParameter("title"));
-    boardDTO.setWrittenDate(Calendar.getInstance());
-    boardDTO.setUpdateDate(Calendar.getInstance());
-    
-    boardController.insert(boardDTO);
-    
+  	boardDTO.setWriterId(userDTO.getId());
+  	boardDTO.setContent(request.getParameter("content"));
+  	boardDTO.setTitle(request.getParameter("title"));
+  	boardDTO.setWrittenDate(Calendar.getInstance());
+  	boardDTO.setUpdateDate(Calendar.getInstance());
+
+  	boardController.insert(boardDTO);
+
   	response.sendRedirect("/board/list.jsp");
   }
   %>
