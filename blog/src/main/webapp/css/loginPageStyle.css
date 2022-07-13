@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+html, body{
+		height: 100%;
+}
+
+body {
+		background-color: pink;
+		display: flex;
+		align-items: center;
+}
+
+.form-signin {
+		max-width: 300px;
+		padding: 15px;
+}
